@@ -1,0 +1,23 @@
+using System;
+using System.Globalization;
+
+namespace URI1008
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            int number, horasTrabalhadas;
+            double valorHora, salary;
+
+            number = int.Parse(Console.ReadLine());
+            horasTrabalhadas = int.Parse(Console.ReadLine());
+            valorHora = double.Parse(Console.ReadLine(), CultureInfo.InvariantCulture);
+
+            salary = horasTrabalhadas * valorHora;
+
+            Console.WriteLine("NUMBER = " + number);            
+            Console.WriteLine("SALARY = U$ " + salary.ToString("F2", CultureInfo.InvariantCulture));
+        }
+    }
+}
